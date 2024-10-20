@@ -1,7 +1,7 @@
 #Очень плохой Docker файл
 Для начала создаим Docker файл с "bad practices". В моём случае это указания `latest` тэга для базового образа, черезмерно большое колличесвто слоёв и использование `ADD` заместо `COPY`.
 ## Код "плохого" контейнера
-\
+```
 # Указываем lates для образа
 FROM python:latest 
 
@@ -21,8 +21,8 @@ RUN useradd -m niroloks-user
 
 USER niroloks-user
 
-CMD ["python", "/app/main.py"]```
-\
+CMD ["python", "/app/main.py"]
+```
 
 ##Описание плохих практик
 
